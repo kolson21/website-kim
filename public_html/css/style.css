@@ -120,7 +120,7 @@ img{
     align-items: center;
 }
 .menu-desktop{
-    position: absolute;
+    position: fixed;
     right: 30px;
 }
 .menu-mobile{
@@ -176,7 +176,15 @@ section:nth-child(2) > .section_title,.section_sub{
 }
 
 /********** Skills **********/
+.skill_list{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    list-style-type: none;
+    align-items: center;
+    padding: 0 5rem 0 5rem;
+}
 /********** Projects **********/
+
 /********** Contact Me **********/
 form{
     margin: 1rem;
@@ -186,6 +194,7 @@ form{
     margin-left: 5rem;
     background-color: var(--bg-color);
     box-shadow: 0 0 20px 0 var(--first-color-light);
+    border-radius: 10px;
     top: 50%;
     left: 50%;
 }
@@ -194,10 +203,11 @@ form{
     width: 400px;
     height: 40px;
     margin-top: 20px;
-    padding: 0 10px 10px 0;
+    padding: 8px 10px 10px 8px;
     border: 1px solid var(--first-color);
-    border-radius: 14px;
+    border-radius: 12px;
     outline: none;
+    font-family: var(--body-font);
 }
 .text-area{
     height: 150px;
@@ -215,13 +225,13 @@ button{
 }
 /********** Feet **********/
 .foot_wrapper{
-    display: inline;
-    align-content: space-between;
-    align-items: center;
+    text-align: right;
+    padding-right: 5rem;
 }
 .icon{
     font-size: var(--h2-font-size);
+    color: var(--first-color);
 }
-p{
-    padding-left: 5rem;
+.icon:hover{
+    color: var(--first-color-light);
 }
