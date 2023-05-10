@@ -84,7 +84,8 @@ h1,h2,h3,h4{
 }
 img{
     max-width: 100%;
-    height: auto;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 /***** Layout *****/
@@ -115,21 +116,36 @@ img{
 
 /********** Nav / Header **********/
 .header{
-
+    display: flex;
+    align-items: center;
 }
 .menu-desktop{
     position: absolute;
     right: 30px;
 }
-@media screen and (max-width: 479px) {
+.menu-mobile{
+    display: flex;
+    align-items: center;
+    color: var(--first-color);
+    font-size: var(--font-semi-bold);
+}
+@media screen and (max-width: 600px) {
+    .menu-desktop {
+        display: none;
+    }
     .header {
-        position: static;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        top: auto;
-        z-index: var(--z-tooltip);
-        background-color: transparent;
+        justify-content: flex-end;
+    }
+    .section {
+        padding: 2rem 0 2rem;
+    }
+}
+@media screen and (min-width: 600px) {
+    .menu-mobile {
+        display: none;
+    }
+    .section {
+        padding: 2rem 0 2rem;
     }
 }
 .link{
@@ -137,7 +153,75 @@ img{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     padding-right: 2rem;
+    display: inline-block;
 }
 .link:hover{
     color: var(--first-color-light);
+}
+
+/********** About Me **********/
+.about{
+    padding: 2rem 5rem 2rem 5rem;
+}
+section:nth-child(2) > .section_title,.section_sub{
+    text-align: left;
+}
+.intro{
+    display: flex;
+    align-items: center;
+}
+.special{
+    font-family: var(--special-font);
+    padding-left: 2rem;
+}
+
+/********** Skills **********/
+/********** Projects **********/
+/********** Contact Me **********/
+form{
+    margin: 1rem;
+}
+.contact_wrapper{
+    width: 500px;
+    margin-left: 5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 20px 0 var(--first-color-light);
+    top: 50%;
+    left: 50%;
+}
+.input{
+    color: var(--text-color);
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding: 0 10px 10px 0;
+    border: 1px solid var(--first-color);
+    border-radius: 14px;
+    outline: none;
+}
+.text-area{
+    height: 150px;
+    padding-top: 10px;
+}
+button{
+    border-radius: 20px;
+    color: var(--first-color);
+    margin-top: 18px;
+    padding: 10px;
+    background-color: var(--bg-color);
+    font-size: var(--normal-font-size);
+    border: none;
+    cursor: pointer;
+}
+/********** Feet **********/
+.foot_wrapper{
+    display: inline;
+    align-content: space-between;
+    align-items: center;
+}
+.icon{
+    font-size: var(--h2-font-size);
+}
+p{
+    padding-left: 5rem;
 }
