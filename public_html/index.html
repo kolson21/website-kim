@@ -2,27 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <!------- Icons ------->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!------- Bootstrap ------->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!------- CSS ------->
     <link rel="stylesheet" href="css/style.css">
 
     <title>Portfolio</title>
-
 </head>
 <body>
 <!------- Header / Navigation Bar ------->
-<section class="header section" id="header">
-        <div class="menu-desktop">
-        <a href="#about" class="link"><i class="uil uil-user"></i> aboutme</a>
-        <a href="#skills" class="link"><i class="uil uil-file-heart"></i> skills</a>
-        <a href="#project" class="link"><i class="uil uil-shovel"></i> projects</a>
-        <a href="#contact" class="link"><i class="uil uil-message"></i> contactme</a>
+<div class="hero-image">
+<nav class="navbar navbar-expand-lg m-3 pr-2">
+    <div class="container-fluid position-fixed">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item ms-auto">
+                    <a class="nav-link" href="#about"><i class="uil uil-user"></i> aboutme</a>
+                </li>
+                <li class="nav-item ms-auto">
+                    <a class="nav-link" href="#skills"><i class="uil uil-file-heart"></i> skills</a>
+                </li>
+                <li class="nav-item ms-auto">
+                    <a class="nav-link" href="#project"><i class="uil uil-shovel"></i> projects</a>
+                </li>
+                <li class="nav-item ms-auto">
+                    <a class="nav-link" href="#contact"><i class="uil uil-message"></i> contactme</a>
+                </li>
+            </ul>
         </div>
-        <div class="menu-mobile">
-        <a href="#" class="link">menu <i class="uil uil-bars"></i></a>
-        </div>
-</section>
+    </div>
+</nav>
 
 <!---------------- Home ----------------->
 
@@ -33,13 +49,14 @@
         <h2 class="section_title">aboutMe</h2><span class="special">Hello World, my name is Kim.</span></div>
     <span class="section_sub"> I'm a Fullstack Web Developer based in Albuquerque. I aspire to be a full-time developer but also available for freelancing for well almost free. My interests in coding started at a young age while playing Neopets and editing my profile, leading to the discovery of HTML and CSS.</span>
 </section>
+</div>
 
 <!--------------- Skills ---------------->
 <section class="skills section" id="skills">
     <h2 class="section_title">skills</h2>
     <ul class="section_sub grid skill_list">
         <li><i class="uil uil-java-script icon"></i> Javascript</li>
-        <li><i class="uil uil-html5-alt icon"></i>HTML & CSS3<i class="uil uil-css3-simple"></i></li>
+        <li><i class="uil uil-html5-alt icon"></i>HTML & CSS3<i class="uil uil-css3-simple icon"></i></li>
         <li>Node.js</li>
         <li><i class="uil uil-slack-alt icon"></i> Slack</li>
         <li><i class="uil uil-docker icon"></i> Docker</li>
@@ -50,18 +67,21 @@
 <!--------------- Projects -------------->
 <section class="project section" id="project">
     <h2 class="section_title">projects</h2>
+    <img src="img/axp-photography-05ATwRd0-JY-unsplash.jpg" alt="pic">
+    <img src="img/paolo-gregotti-armAujMweP4-unsplash.jpg" alt="pic">
+    <img src="img/rhamely-SMM3FJrhguM-unsplash.jpg" alt="pic">
 </section>
 
 <!-------------- Contact Me ------------->
 <section class="contact section" id="contact">
     <div class="contact_wrapper">
     <h2 class="section_title">contactMe</h2>
-        <form>
-            <input type="text" class="input" placeholder="name">
-            <input type="text" class="input" placeholder="email">
-            <input type="text" class="input" placeholder="subject">
-            <textarea type="text" class="input text-area" placeholder="message"></textarea>
-            <button type="button" class="button">send</button>
+        <form onsubmit="sendEmail(); reset(); return false">
+            <input type="text" class="input" id="name" placeholder="name" required>
+            <input type="email" class="input" id="email" placeholder="email" required>
+            <input type="text" class="input" id="subject" placeholder="subject" required>
+            <textarea type="text" class="input text-area" id="message" placeholder="message"></textarea>
+            <button type="submit" class="button">send</button>
         </form>
     </div>
 </section>
@@ -76,6 +96,9 @@
     </div>
 </section>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
