@@ -59,29 +59,54 @@
 <section class="skills section" id="skills">
     <h2 class="section_title">skills</h2>
     <ul class="section_sub grid skill_list">
-        <li><i class="uil uil-java-script icon"></i> Javascript</li>
-        <li><i class="uil uil-html5-alt icon"></i>HTML & CSS3<i class="uil uil-css3-simple icon"></i></li>
-        <li>Node.js</li>
-        <li><i class="uil uil-slack-alt icon"></i> Slack</li>
-        <li><i class="uil uil-docker icon"></i> Docker</li>
-        <li><i class="uil uil-react icon"></i> React</li>
+        <div class="row">
+        <li class="col-lg-4"><i class="uil uil-java-script icon"></i> Javascript</li>
+        <li class="col-lg-4"><i class="uil uil-html5-alt icon"></i>HTML & CSS3<i class="uil uil-css3-simple icon"></i></li>
+            <li class="col-lg-4">Node.js</li>
+        <li class="col-lg-4"><i class="uil uil-slack-alt icon"></i> Slack</li>
+        <li class="col-lg-4"><i class="uil uil-docker icon"></i> Docker</li>
+            <li class="col-lg-4"><i class="uil uil-react icon"></i> React</li></div>
     </ul>
 </section>
 
 <!--------------- Projects -------------->
-<section class="project section" id="project">
+<section class="project m-lg-3" id="project">
+    <div class="container">
     <h2 class="section_title">projects</h2>
-    <img src="img/axp-photography-05ATwRd0-JY-unsplash.jpg" alt="pic">
-    <img src="img/paolo-gregotti-armAujMweP4-unsplash.jpg" alt="pic">
-    <img src="img/rhamely-SMM3FJrhguM-unsplash.jpg" alt="pic">
+        <div class="row project-list">
+            <div class="col-lg-3 work">
+                <img src="img/paolo-gregotti-armAujMweP4-unsplash.jpg" alt="pic">
+                <div class="layer">
+                    <h3>Portfolio Project</h3>
+                    <p>Created a static page portfolio to showcase my skills learned.</p>
+                    <a href="#">Port</a>
+                </div>
+            </div>
+            <div class="col-lg-3 work">
+                <img src="img/paolo-gregotti-armAujMweP4-unsplash.jpg" alt="pic">
+                <div class="layer">
+                    <h3>Capstone Project</h3>
+                    <p>Team created project to capstone all skills learned during bootcamp.</p>
+                    <a href="#">Dream</a>
+                </div>
+            </div>
+            <div class="col-lg-3 work">
+                <img src="img/paolo-gregotti-armAujMweP4-unsplash.jpg" alt="pic">
+                <div class="layer">
+                    <h3>Other Project</h3>
+                    <p>Some other cool project I made</p>
+                    <a href="#">oyea</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-------------- Contact Me ------------->
-<section class="contact section" id="contact">
+<section class="contact section px-lg-5" id="contact">
     <div class="contact_wrapper">
     <h2 class="section_title">contactMe</h2>
-        <form onsubmit="sendEmail(); reset(); return false">
-            <input type="text" class="input" id="name" placeholder="name" required>
+        <form class="form_section" onsubmit="sendEmail(); reset(); return false">
             <input type="email" class="input" id="email" placeholder="email" required>
             <input type="text" class="input" id="subject" placeholder="subject" required>
             <textarea type="text" class="input text-area" id="message" placeholder="message"></textarea>

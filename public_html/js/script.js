@@ -1,13 +1,17 @@
 // enable email sending
 function sendEmail(){
     Email.send({
-        SecureToken : "8e0eb6a3-f301-494d-a923-de46485e32c6",
+        SecureToken : "7668f438-cf44-4639-b8f1-9990dd4c8f33",
         To : 'kim.dev622@gmail.com',
-        From : document.getElementById('email').value,
+        From : 'kim.dev622@gmail.com',
         Subject : document.getElementById('subject').value,
-        Body : document.getElementById('message').value
+        Body : document.getElementById('email').value  + '\n<br>\n' +
+            document.getElementById('message').value
     }).then(
-        message => alert("message was sent")
+        message => {
+            console.log(message)
+            alert("message was sent")
+            return alert }
     )
 }
 

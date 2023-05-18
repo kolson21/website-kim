@@ -103,11 +103,11 @@ img{
 .section_sub{
     text-align: center;
 }
-.container{
-    max-width: 768px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-}
+/*.container{*/
+/*    max-width: 800px;*/
+/*    margin-left: 1.5rem;*/
+/*    margin-right: 1.5rem;*/
+/*}*/
 .grid{
     display: grid;
     gap: 1.5rem;
@@ -153,7 +153,6 @@ section:nth-child(2) > .section_title{
     padding-right: 8rem;
 }
 .skill_list{
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     list-style-type: none;
     justify-content: space-evenly;
@@ -168,13 +167,71 @@ section:nth-child(3) > .section_sub{
 .project{
     display: inline;
 }
+/*.project-list{*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+/*    grid-gap: 40px;*/
+/*    margin-top: 50px;*/
+/*}*/
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.work img{
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    max-width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), var(--first-color-alt));
+    border-radius: 10px;
+    left: 0;
+    bottom:0;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: var(--h3-font-size);
+    color: var(--container-color);
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: var(--first-color);
+    text-decoration: none;
+    font-size: var(--normal-font-size);
+    line-height: 60px;
+    background: var(--container-color);
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
 /********** Contact Me **********/
 form{
     margin: 1rem;
 }
 .contact_wrapper{
-    width: 500px;
-    margin-left: 5rem;
+    max-width: 400px;
     background-color: var(--bg-color);
     box-shadow: 0 0 20px 0 var(--first-color-light);
     border-radius: 10px;
@@ -183,7 +240,7 @@ form{
 }
 .input{
     color: var(--text-color);
-    width: 400px;
+    width: 100%;
     height: 40px;
     margin-top: 20px;
     padding: 8px 10px 10px 8px;
