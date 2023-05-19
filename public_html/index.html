@@ -14,18 +14,20 @@
     <title>Portfolio</title>
 </head>
 <body>
+
 <!------- Header / Navigation Bar ------->
-<div class="hero-image">
-<nav class="navbar navbar-expand-lg m-3 pr-2">
+<div class="wrapper m-lg-3">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid position-fixed">
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+
             <a class="nav-link dark" id="dark" href="#"><i class="uil uil-moon"></i></a>
+
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item ms-auto">
-
                 </li>
                 <li class="nav-item ms-auto">
                     <a class="nav-link" href="#about"><i class="uil uil-user"></i> aboutme</a>
@@ -44,28 +46,32 @@
     </div>
 </nav>
 
-<!---------------- Home ----------------->
-
-
 <!-------------- About Me --------------->
+
 <section class="about section" id="about">
+    <img src="img/welcome.png" alt="welcome" height="150" width="300" class="welcome">
+
     <div class="intro">
-        <h2 class="section_title">aboutMe</h2><span class="special">Hello World, my name is Kim.</span></div>
-    <span class="section_sub"> I'm a Fullstack Web Developer based in Albuquerque. I aspire to be a full-time developer but also available for freelancing for well almost free. My interests in coding started at a young age while playing Neopets and editing my profile, leading to the discovery of HTML and CSS.</span>
+        <h2 class="section_title">aboutMe</h2>
+        <span class="special">Hello World, my name is Kim.</span></div>
+    <div class="about-wrapper">
+        <span class="section_sub"> I'm a Fullstack Web Developer based in Albuquerque. I aspire to be a full-time developer but also available for freelancing for well almost free. My interests in coding started at a young age while playing Neopets and editing my profile, leading to the discovery of HTML and CSS.</span> <img src="img/self.png" alt="self" class="self" height="250" width="425"></div>
 </section>
-</div>
 
 <!--------------- Skills ---------------->
 <section class="skills section" id="skills">
     <h2 class="section_title">skills</h2>
     <ul class="section_sub grid skill_list">
-        <div class="row">
-        <li class="col-lg-4"><i class="uil uil-java-script icon"></i> Javascript</li>
-        <li class="col-lg-4"><i class="uil uil-html5-alt icon"></i>HTML & CSS3<i class="uil uil-css3-simple icon"></i></li>
-            <li class="col-lg-4">Node.js</li>
-        <li class="col-lg-4"><i class="uil uil-slack-alt icon"></i> Slack</li>
-        <li class="col-lg-4"><i class="uil uil-docker icon"></i> Docker</li>
-            <li class="col-lg-4"><i class="uil uil-react icon"></i> React</li></div>
+        <div class="skill row">
+            <li class="col-lg-3 sicon"><img src="img/html-icon.png" alt="html" height="100" width="100"><h3>HTML</h3></li>
+            <li class="col-lg-3 sicon"><img src="img/css-icon.png" alt="html" height="100" width="100"><h3>CSS</h3></li>
+            <li class="col-lg-3 sicon"><img src="img/bootstrap-icon.png" alt="html" height="100" width="100"><h3>BOOTSTRAP</h3></li>
+            <li class="col-lg-3 sicon"><img src="img/node-icon.png" alt="html" height="100" width="100"><h3>NODE.js</h3></li>
+            <li class="col-lg-3 sicon"><img src="img/js-icon.png" alt="html" height="100" width="100"><h3>JS</h3></li>
+            <li class="col-lg-3 sicon"><img src="img/sql-icon.png" alt="html" height="100" width="130"><h3>postgreSQL</h3></li>
+            <li class="col-lg-3 sicon"><img src="img/react-icon.png" alt="html" height="100" width="100"><h3>REACT</h3></li>
+            <li class="col-lg-3 sicon"><img src="img/git-icon.png" alt="html" height="100" width="100"><h3>GIT</h3></li>
+        </div>
     </ul>
 </section>
 
@@ -75,19 +81,19 @@
     <h2 class="section_title">projects</h2>
         <div class="row project-list">
             <div class="col-lg-3 work">
-                <img src="img/paolo-gregotti-armAujMweP4-unsplash.jpg" alt="pic">
+                <img src="img/ben-kolde-bs2Ba7t69mM-unsplash.jpg" alt="pic">
                 <div class="layer">
                     <h3>Portfolio Project</h3>
                     <p>Created a static page portfolio to showcase my skills learned.</p>
-                    <a href="#">Port</a>
+                    <a href="https://github.com/kolson21/website-kim"><i class="uil uil-github proj"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 work">
-                <img src="img/paolo-gregotti-armAujMweP4-unsplash.jpg" alt="pic">
+                <img src="img/javardh-2q6C5zDJOsg-unsplash.jpg" alt="pic">
                 <div class="layer">
                     <h3>Capstone Project</h3>
                     <p>Team created project to capstone all skills learned during bootcamp.</p>
-                    <a href="#">Dream</a>
+                    <a href="https://github.com/Dream-Capstone/dream-capstone"><i class="uil uil-github proj"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 work">
@@ -95,7 +101,15 @@
                 <div class="layer">
                     <h3>Other Project</h3>
                     <p>Some other cool project I made</p>
-                    <a href="#">oyea</a>
+                    <a href="#">link</a>
+                </div>
+            </div>
+            <div class="col-lg-3 work">
+                <img src="img/jet-dela-cruz-2lCWUq3d0E4-unsplash.jpg" alt="pic">
+                <div class="layer">
+                    <h3>Other Project</h3>
+                    <p>Some other cool project I made</p>
+                    <a href="#">link</a>
                 </div>
             </div>
         </div>
@@ -103,8 +117,8 @@
 </section>
 
 <!-------------- Contact Me ------------->
-<section class="contact section px-lg-5" id="contact">
-    <div class="contact_wrapper">
+<section class="contact section px-lg-5 row" id="contact">
+    <div class="contact_wrapper col">
     <h2 class="section_title">contactMe</h2>
         <form class="form_section" onsubmit="sendEmail(); reset(); return false">
             <input type="email" class="input" id="email" placeholder="email" required>
@@ -112,8 +126,14 @@
             <textarea type="text" class="input text-area" id="message" placeholder="message"></textarea>
             <button type="submit" class="button">send</button>
         </form>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
     </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_GbabwrUY2k.json"  background="transparent" class="col lottie"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+
 </section>
+</div>
 
 <!---------------- Footer --------------->
 <section class="footer section" id="footer">
